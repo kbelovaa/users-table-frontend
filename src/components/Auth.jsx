@@ -9,7 +9,7 @@ import { Context } from '../pages/index';
 import { login, registration } from '../http/authAPI';
 
 const Auth = observer(() => {
-  const { user } = useContext(Context);
+  const { user, table } = useContext(Context);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -28,6 +28,7 @@ const Auth = observer(() => {
       }
       user.setUser(data);
       user.setIsAuth(true);
+      table.setPage(1);
       navigate('/users');
     } catch (err) {
       alert(err.response.data.message);
