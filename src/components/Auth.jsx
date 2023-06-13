@@ -19,7 +19,6 @@ const Auth = observer(() => {
   const isLogin = location.pathname === '/login';
 
   const handleClick = async () => {
-    console.log('url', process.env.REACT_APP_API_URL);
     let data;
     try {
       if (isLogin) {
