@@ -19,8 +19,8 @@ const Auth = observer(() => {
   const isLogin = location.pathname === '/login';
 
   const handleClick = async () => {
+    let data;
     try {
-      let data;
       if (isLogin) {
         data = await login(email, password);
       } else {
