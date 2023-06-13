@@ -12,6 +12,7 @@ const App = observer(() => {
   const [defaultRoute, setDefaultRoute] = useState('');
 
   useEffect(() => {
+    console.log(localStorage.getItem('token'))
     if (localStorage.getItem('token')) {
       check().then((data) => {
         user.setUser(data);
