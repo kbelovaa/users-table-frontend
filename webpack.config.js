@@ -44,6 +44,6 @@ module.exports = {
       inject: 'body',
     }),
     new CleanWebpackPlugin(),
-    new Dotenv(),
+    new Dotenv({ systemvars: true }),
   ],
 };
