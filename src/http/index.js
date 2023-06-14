@@ -1,16 +1,12 @@
 import axios from 'axios';
 
 const $host = axios.create({
-  baseURL: process.env.REACT_APP_API_URL,
+  baseURL: "https://users-table-api.onrender.com/",
 });
 
 const $authHost = axios.create({
-  baseURL: process.env.REACT_APP_API_URL,
+  baseURL: "https://users-table-api.onrender.com/",
 });
-
-console.log(1, process.env.REACT_APP_API_URL);
-console.log(2, REACT_APP_API_URL);
-console.log(3, process.env.API_URL);
 
 const authInterceptor = (config) => {
   const authConfig = config;
