@@ -35,7 +35,7 @@ const UsersTable = observer(() => {
 
   const setStatus = (status) => {
     changeStatus(selectedList, status)
-      .then(() => fetchUsers())
+      .then(() => fetchUsers(table.page, table.limit))
       .then((data) => table.setUsers(data))
       .then(() => {
         if (selectedList.includes(jwt_decode(localStorage.getItem('token')).id) && status === 'blocked') {
